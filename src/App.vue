@@ -7,16 +7,6 @@ import HelloWorld from './components/HelloWorld.vue';
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
-  <div>
-    <b-notification
-      v-for="n in getNotifications"
-      :type="n.type"
-      :key="n.id"
-      aria-close-label="Close notification"
-    >
-      {{ n.content }}
-    </b-notification>
-  </div>
 </template>
 
 <style>

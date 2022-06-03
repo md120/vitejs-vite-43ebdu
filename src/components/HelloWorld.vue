@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 defineProps({
-  msg: String
-})
+  msg: String,
+});
 
-const count = ref(0)
+const count = ref(0);
 </script>
 
 <template>
@@ -31,6 +31,16 @@ const count = ref(0)
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <div>
+    <b-notification
+      v-for="n in getNotifications"
+      :type="n.type"
+      :key="n.id"
+      aria-close-label="Close notification"
+    >
+      {{ n.content }}
+    </b-notification>
+  </div>
 </template>
 
 <style scoped>
