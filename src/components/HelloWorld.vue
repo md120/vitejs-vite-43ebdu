@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { mapGetters } from 'vue';
 
 defineProps({
   msg: String,
@@ -41,6 +42,10 @@ const notify = {
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
+  </p>
+  <p>
+    test
+    {{ notify[0].content }}
   </p>
   <div>
     <b-notification
