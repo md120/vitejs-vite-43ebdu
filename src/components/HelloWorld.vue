@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { mapGetters } from 'vuex';
 
 defineProps({
   msg: String,
