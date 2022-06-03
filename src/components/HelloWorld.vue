@@ -44,14 +44,14 @@ const notify = {
   </p>
   <p>test</p>
   <div>
-    <b-notification
+    <notification
       v-for="n in notify"
       :type="n.type"
       :key="n.id"
       aria-close-label="Close notification"
     >
       {{ n.content }}
-    </b-notification>
+    </notification>
   </div>
 </template>
 
