@@ -45,7 +45,7 @@ const notify = {
   <p>test</p>
   <div>
     <notification
-      v-for="n in notify"
+      for="n in notify"
       :type="n.type"
       :key="n.id"
       aria-close-label="Close notification"
