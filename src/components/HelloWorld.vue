@@ -15,6 +15,11 @@ const notify = {
       content:
         'Due to a change of data provider, we have lost a (small) part of our data series and gained other series instead. This resulted on April 6, 2022, for some models in some countries, in a structural break in the GDP projections.',
     },
+    {
+      id: 2,
+      type: 'is-info',
+      content: 'test2222',
+    },
   ],
 };
 </script>
@@ -44,14 +49,14 @@ const notify = {
   </p>
   <p>test</p>
   <div>
-    <notification
-      for="n in notify"
+    <b-notification
+      v-for="n in notify.notifications"
       :type="n.type"
       :key="n.id"
       aria-close-label="Close notification"
     >
       {{ n.content }}
-    </notification>
+    </b-notification>
   </div>
 </template>
 
