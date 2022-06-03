@@ -6,6 +6,17 @@ defineProps({
 });
 
 const count = ref(0);
+
+const notify = {
+  notifications: [
+    {
+      id: 1,
+      type: 'is-info',
+      content:
+        'Due to a change of data provider, we have lost a (small) part of our data series and gained other series instead. This resulted on April 6, 2022, for some models in some countries, in a structural break in the GDP projections.',
+    },
+  ],
+};
 </script>
 
 <template>
@@ -33,7 +44,7 @@ const count = ref(0);
   </p>
   <div>
     <b-notification
-      v-for="n in getNotifications"
+      v-for="n in notify"
       :type="n.type"
       :key="n.id"
       aria-close-label="Close notification"
