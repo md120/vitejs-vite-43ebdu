@@ -45,7 +45,6 @@ const notify = {
   </p>
   <p>
     test
-    {{ notify[0].content }}
   </p>
   <div>
     <b-notification
